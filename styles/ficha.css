@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spectral+SC';
+
+}
+
+body{
+
+    width: 100vw;
+    height: 100vh;
+    /* background-image: linear-gradient(to top, #0f0f11, #3a3f44 ) ; */
+    background-image: linear-gradient(to top, #1f212c, #597892 ) ;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+form{
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 80%;
+    width: 80%;
+    position: relative;
+    z-index: 2;
+
+}
+
+.left, .right{
+
+    width: 48%;  /* Define largura para evitar que um ultrapasse o outro */
+
+}
+
+.right{
+
+    padding-top: 60px;
+    height: 80vh;
+
+}
+
+.left{
+
+    height: 80vh;
+
+}
+
+.botoes{
+
+    width: 75vw; 
+    padding-top: 40px ;           
+    display: flex;
+    justify-content: center;
+    padding-left: 5vw;
+
+}
+
+.right fieldset{
+
+    overflow: auto;
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.left fieldset{
+
+    height: 695px;
+    display: flex;
+    flex-direction: column;
+    font-size: 17pt;
+    border: none;
+    box-shadow: inset 0px -2px 0px #f1f893;
+    background: linear-gradient(to top, rgb(241, 248, 147, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    justify-content: flex-start;
+    gap: 30px;
+    color: #f1f893;
+    padding-left: 10px;
+    min-width: 500px;
+    overflow: auto;
+
+}
+
+.left legend{
+
+    text-align: center;
+    color: #f1f893;
+    text-shadow: 0 0 10px rgb(241, 248, 147, 0.6 ), /* Amarelo suave */
+                 0 0 20px rgb(241, 248, 147, 0.4 ), 
+                 0 0 30px rgb(241, 248, 147, 0.2 );
+}
+
+.left input{
+
+    font-size: 13pt;
+    color:  #ffffd2;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0px -2px 0px #f1f893;
+    width: 200px;
+
+}
+
+.left select{
+
+    font-size: 14pt;
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px #f1f893;
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno ao focar no select */
+    background: none; /* Remove qualquer fundo adicional */
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome/Safari */
+    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+    appearance: none; /* Remove a aparência padrão em navegadores modernos */
+    color: #fcffcd;
+    text-align: center;
+}
+
+.left option{
+
+    background-color: #373947;
+    border: 10px;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+
+input:focus{
+
+    outline: none;
+
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+
+.status{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+
+}
+
+.status input{
+
+    text-align: center;
+    width: 50px;
+
+}
+
+.atrib{
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+}
+
+.atrib input{
+
+    width: 30px;
+    font-size: 15pt;
+    text-align: center;
+
+}
+
+
+a{
+
+    color: #f1f893;
+    font-size: 18pt;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+   
+
+
+}
+
+.link{
+
+    position: fixed;
+    bottom: 30px;
+
+}
+
+.tabs{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+
+}
+
+.right fieldset{
+
+    height: 600px;
+    border: none;
+
+}
+
+
+#peri{
+
+    color: #93e4f8;
+    box-shadow: inset 0px -2px 0px #93e4f8;
+
+}
+
+#tab1 fieldset{
+
+    color:rgb(147, 228, 248) ;
+    box-shadow: inset 0px -2px 0px #93e4f8;
+    background: linear-gradient(to top, rgb(147, 228, 248, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    font-size: 15pt;
+
+}
+
+#tab1 input{
+
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0px -2px 0px #93e4f8;
+    color: #abe9f8;
+    font-size: 17pt;
+    text-align: center;
+
+}
+
+.right fieldset::-webkit-scrollbar{
+
+    width: 15px;
+
+}
+
+.right fieldset::-webkit-scrollbar-thumb{
+
+    background-color: #93e4f8;
+    border-radius: 15px;
+}
+
+
+#pericias{
+
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #95bec9;
+
+}
+
+.acrobacia, .adestramento, .artes, .atletismo, .ciencias, .crime, .cultura, .diplomacia, .enganacao, 
+.fortitude, .furtividade, .infeccao, .iniciativa, .intimidacao, .intuicao, .investigacao, .luta, .medicina, 
+.percepcao, .pontaria, .reflexos, .sobrevivencia, .engenharia, .vontade{
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.maximo{
+
+    margin-top: 10px ;
+    padding-bottom: 20px;
+
+}
+
+#pericias li{
+
+    padding-left: 10px;
+    list-style: none;
+
+}
+
+
+#pericias input{
+
+    font-size: 17pt;
+    width: 30px;
+
+}
+
+#pericias select{
+
+    font-size: 17pt;
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px #93e4f8;
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno ao focar no select */
+    background: none; /* Remove qualquer fundo adicional */
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome/Safari */
+    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+    appearance: none; /* Remove a aparência padrão em navegadores modernos */
+    color: #abe9f8;
+    text-align: center;
+    
+
+}
+
+#pericias option{
+
+    background-color: #373947;
+    border: 10px;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+#comb{
+
+    color: #f89f93;
+    box-shadow: inset 0px -2px 0px #f89f93;
+
+}
+
+#tab2 fieldset{
+
+    color:rgb(248, 159, 147) ;
+    box-shadow: inset 0px -2px 0px #f89f93;
+    background: linear-gradient(to top, rgb(248, 159, 147, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    font-size: 18pt;
+
+
+}   
+
+#tab2 fieldset::-webkit-scrollbar-thumb{
+
+    background-color: #f89f93;
+
+}
+
+#tab2 select{
+
+    font-size: 17pt;
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px #f89f93;
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno ao focar no select */
+    background: none; /* Remove qualquer fundo adicional */
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome/Safari */
+    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+    appearance: none; /* Remove a aparência padrão em navegadores modernos */
+    color: #f7cec9;
+    text-align: center;
+
+}
+
+#tab2 option{
+
+    background-color: #373947;
+    border: 10px;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.resistencias input{
+
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px #f89f93;
+    font-size: 15pt;
+    text-align: center;
+    color: #f7cec9;
+    border: none;
+
+}
+
+.proficiencias select{
+
+    padding: 5px;
+
+}
+
+.relvas input{
+
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px #f89f93;
+    border: none;
+    font-size: 14pt;
+    color: #f7cec9;
+    width: 70px;
+    text-align: center;
+
+}
+
+
+#tab2 textarea{
+
+    height: 130px;
+    width: 300px;
+    resize: none;
+    color: #b87b73 ;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #f89f93;
+
+}
+
+#tab2 textarea::-webkit-scrollbar{
+
+    width: 10px;
+
+}
+
+#tab2 textarea::-webkit-scrollbar-thumb{
+
+    background: #f89f93 ;
+    border-radius: 10px;
+
+}
+
+
+#tal{
+
+    color: #f8d093;
+    box-shadow: inset 0px -2px 0px #f8d093;
+
+}
+
+#tab3 fieldset{
+
+    color:rgb(248, 208, 147) ;
+    box-shadow: inset 0px -2px 0px #f8d093;
+    background: linear-gradient(to top, rgb(248, 208, 147, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    font-size: 18pt;
+    gap: 20px;
+
+}   
+
+#tab3 textarea{
+
+    height: 380px;
+    width: 300px;
+    resize: none;
+    color: #c9a97a;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #f8d093;
+
+}
+
+#tab3 input{
+
+    box-shadow: inset 0px -2px 0px #f8d093;
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+    width: 40px;
+    text-align: center;
+    color: #c9a97a;
+
+}
+
+#tab3 textarea::-webkit-scrollbar{
+
+    width: 10px;
+
+}
+
+#tab3 textarea::-webkit-scrollbar-thumb{
+
+    background: #f8d093 ;
+    border-radius: 10px;
+
+}
+
+#inv{
+
+    color: #abf893;
+    box-shadow: inset 0px -2px 0px #abf893;
+
+}
+
+#tab4 fieldset{
+
+    color:rgb(171, 248, 147) ;
+    box-shadow: inset 0px -2px 0px #abf893;
+    background: linear-gradient(to top, rgb(171, 248, 147, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    font-size: 18pt;
+    gap: 20px;
+
+}
+
+#tab4 input{
+
+    box-shadow: inset 0px -2px 0px #abf893;
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+    width: 125px;
+    text-align: center;
+    color: #7eb46d;
+
+}
+
+#tab4 textarea{
+
+    height: 500px;
+    width: 450px;
+    resize: none;
+    color: #7eb46d;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #abf893;
+
+}
+
+#tab4 textarea::-webkit-scrollbar{
+
+    width: 10px;
+
+}
+
+#tab4 textarea::-webkit-scrollbar-thumb{
+
+    background: #abf893 ;
+    border-radius: 10px;
+
+}
+
+textarea:focus{
+
+    outline: none;
+    border: none;
+
+}
+
+input::placeholder, textarea::placeholder{
+
+    color: #9fa1b1;
+
+}
+
+#inf{
+
+    color: #eea8ff;
+    box-shadow: inset 0px -2px 0px #eea8ff;
+
+}
+
+#tab5 fieldset{
+
+    color:rgb(238, 168, 255);
+    box-shadow: inset 0px -2px 0px #eea8ff;
+    background: linear-gradient(to top, rgb(238, 168, 255, 0.2 ) 20%, rgba(52, 152, 219, 0) 100%);
+    font-size: 18pt;
+    gap: 25px;
+    text-align: center;
+
+}
+
+#tab5 input{
+
+    box-shadow: inset 0px -2px 0px #eea8ff;
+    background-color: transparent;
+    border: none;
+    font-size: 15pt;
+    text-align: center;
+    color: #c389d1;
+
+}
+
+#desc{
+
+    width: 300px;
+    height: 100px;
+    resize: none;
+    color: #c389d1;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #eea8ff
+}
+
+#aniv{
+
+    width: 60px;
+
+}
+
+.gosto textarea{
+
+    width: 180px;
+    height: 80px;
+    resize: none;
+    color: #c389d1;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #eea8ff
+
+}
+
+.objetivo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.objetivo textarea{
+
+    width: 400px;
+    height: 80px;
+    resize: none;
+    color: #c389d1;
+    background-color: transparent;
+    border: none;
+    font-size: 12pt;
+    box-shadow: inset 0px -2px 0px #eea8ff
+
+}
+
+button{
+
+    background:none;
+    border: none ;
+    color: #f1f893;
+    box-shadow: inset 0px -2px 0px #f1f893; 
+    font-size: 15pt;
+    
+}
+
+@media(max-width: 550px){
+
+    body{
+
+        width: 100vw;
+        height: 205vh;
+
+    }
+
+
+    form{
+
+        width: 100vw;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+
+        
+
+
+    }
+
+    .left{
+
+      
+        width: 100vw;
+        margin-bottom: 30px;
+
+    }
+
+    .botoes{
+
+        width: 100vw;
+        margin-top: 15px;
+        padding: 0;
+
+    }
+
+    button{
+
+        font-size: 17pt;
+        background-color: #292a2e;
+        padding: 5px;
+        border-radius: 30px;
+        border: 2px solid #f1f893;
+
+    }
+
+    .right{
+
+        padding: 0px;
+        justify-content: center;
+        padding-top: 30px;
+        width: 100vw;
+
+
+    }
+
+    .tabs{
+
+        width: 100vw;
+        gap: 1px;
+
+    }
+
+    .link{
+
+        bottom: 20px;
+        background-color: #292a2e;
+        padding: 10px;
+        border-radius: 30px;
+        border: 3px solid #f1f893;
+
+    }
+
+
+}
