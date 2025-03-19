@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    transition: background-image 1s ease-in-out; /* Transição suave entre as imagens */
+}
+
+#content {
+    text-align: center;
+}
+
+.arrow {
+    font-size: 2rem;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#arrow-left {
+    margin-right: 50px;
+}
+
+#arrow-right {
+    margin-left: 50px;
+}
+
+#text {
+    font-size: 2rem;
+    margin: 20px;
+    color: white; /* Cor do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destacá-lo */
+}
