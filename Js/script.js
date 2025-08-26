@@ -21,11 +21,13 @@ window.onload = function() {
         document.getElementById('pre').value = jogador.pre || '';
         document.getElementById('vig').value = jogador.vig || '';
         document.getElementById('def').value = jogador.def || '';
-
-        // Preenche os campos da defesa que estavam faltando
         document.getElementById('agiD').value = jogador.agiD || '';
         document.getElementById('vigD').value = jogador.vigD || '';
         document.getElementById('modD').value = jogador.modD || '';
+        document.getElementById('intgr').value = jogador.intgr || '';
+        document.getElementById('agiIn').value = jogador.agiIn || '';
+        document.getElementById('vigIn').value = jogador.vigIn || '';
+        document.getElementById('modIn').value = jogador.modIn || '';
 
         // Preenche os campos dentro das abas
         carregarAbas(jogador.abaData || {});
@@ -53,11 +55,13 @@ document.getElementById('ficha').addEventListener('submit', function(event) {
         pre: document.getElementById('pre').value,
         vig: document.getElementById('vig').value,
         def: document.getElementById('def').value,
-
-        // Salva os novos campos da defesa
         agiD: document.getElementById('agiD').value,
         vigD: document.getElementById('vigD').value,
         modD: document.getElementById('modD').value,
+        intgr: document.getElementById('intgr').value,
+        agiIn: document.getElementById('agiIn').value,
+        vigIn: document.getElementById('vigIn').value,
+        modIn: document.getElementById('modIn').value,
 
         abaData: salvarAbas() // Salva os dados das abas
     };
