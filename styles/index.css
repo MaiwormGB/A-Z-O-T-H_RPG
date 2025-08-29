@@ -180,12 +180,19 @@ body{
 /* Responsividade para dispositivos menores */
 @media (max-width: 900px) {
     .container-principal {
+        height: 90%;
         flex-direction: column;
-        gap: 40px;
+        justify-content: center;
     }
     
     .img, .carrossel-vertical {
         width: 100%;
+    }
+
+    .carrossel-vertical{
+
+        height: 150px;
+
     }
     
     .botoes-wrapper {

@@ -12,7 +12,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to top, #1f212c, #597892);
+    background-image: linear-gradient(to top, #494035, #ad906e);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -25,33 +25,36 @@ body {
 
 .img-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2400px;
-    height: 2400px;
-    z-index: -1; /* Fica atrás de todo o conteúdo */
-}
-
-.img-container img {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    opacity: 0.03; /* Transparência para não atrapalhar o conteúdo */
-    animation: rotacao-suave 500s linear infinite;
+    z-index: -1;
+    overflow: hidden;
 }
 
-/* Animação de rotação contínua */
-@keyframes rotacao-suave {
+.imagem-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('../Acervo/Fundo login.png') 0 0 repeat-x;
+    background-size: auto 100%;
+    opacity: 0.3;
+    animation: mover-fundo 120s linear infinite;
+}
+
+/* Animação para mover o fundo da direita para a esquerda */
+@keyframes mover-fundo {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateX(-50%);
     }
 }
 
-/* O restante do seu CSS permanece igual */
 .container-principal {
     display: flex;
     flex-direction: column;
@@ -71,18 +74,13 @@ body {
     height: 800px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #ffffd22c;
-    border: 5px solid #ffffd2;
+    background-color: #f5cc8e2d;
+    border: 5px solid #facb85;
     border-bottom: 0;
     border-radius: 300px 300px 10px 10px;
 }
 
-
-
-
-
-textarea{
-
+textarea {
     width: 380px;
     height: 100px;
     resize: none;
@@ -90,24 +88,20 @@ textarea{
     border: none;
     background-color: transparent;
     font-size: 12pt;
-    box-shadow: inset 0px -2px 0px #ffffd2;
-    color: #ffffd2;
-
+    box-shadow: inset 0px -2px 0px #facb85;
+    color: #facb85;
 }
 
-textarea::placeholder{
-
-    color: #ffffd2;
-    
-
+textarea::placeholder {
+    color: #facb85;
 }   
 
 input {
     background-color: transparent;
-    color: #ffffd2;
+    color: #facb85;
     border: none;
     font-size: 15pt;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #facb85;
     outline: none;
     width: 80%;
     transition: all 0.1s ease;
@@ -118,37 +112,40 @@ input:focus {
 }
 
 .login label {
-    color: #ffffd2;
+    color: #facb85;
     font-size: 18pt;
 }
 
-.img_cacador input{
-
-    width: 50%;
-    height: 100%;
-    padding-bottom: 10px;
-
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #facb85;
+    font-size: 20pt;
+    transition: all 0.2s ease;
 }
 
-.img_cacador{
+.custom-file-upload:hover {
+    color: #ffffd2;
+}
 
+.custom-file-upload svg {
+    transition: all 0.2s ease;
+}
+
+.custom-file-upload:hover svg {
+    transform: scale(1.1);
+}
+
+.img_cacador {
     display: flex;
     width: 400px;
     height: 100px;
     justify-content: center;
     align-items: center;
     gap: 25px;
-
-
 }
-
-.img_cacador label{
-
-    font-size: 20pt;
-
-
-}
-
 
 .nome, .senha {
     display: flex;
@@ -167,9 +164,9 @@ input:focus {
     display: flex;
     width: 600px;
     padding-top: 2px;
-    border-top: 4px solid #ffffd2;
+    border-top: 4px solid #facb85;
     border-radius: 0px 0px 30px 30px;
-    background-color: #ffffd22c;
+    background-color: #f5cc8e2d;
     justify-content: center;
 }
 
@@ -177,14 +174,14 @@ input:focus {
     display: flex;
     width: 400px;
     padding-top: 2px;
-    border-top: 4px solid #ffffd2;
-    background-color: #ffffd22c;
+    border-top: 4px solid #facb85;
+    background-color: #f5cc8e2d;
     border-radius: 0px 0px 30px 30px;
     justify-content: center;
 }
 
 a {
-    color: #86865f;
+    color: #f5cc8e2d;
     text-decoration: none;
     font-size: 15pt;
     transition: all 0.2s ease;
@@ -192,7 +189,7 @@ a {
 
 a:hover {
     font-size: 18pt;
-    color: #ffffd2;
+    color: #facb85;
 }
 
 .login {
@@ -203,17 +200,17 @@ a:hover {
 
 button {
     font-size: 20pt;
-    background-color: rgba(119, 119, 88, 0.2);
-    color: #949475;
+    background-color: #f5cc8e2d;
+    color: #c4a26f;
     padding: 5px;
     border-radius: 30px;
-    border: 3px solid;
+    border: 3px solid #facb85;
     transition: ease-in-out 0.2s;
 }
 
 button:hover {
     background-color: rgba(255, 255, 210, 0.2);
-    color: #ffffd2;
+    color: #facb85;
     font-size: 25pt;
     cursor: pointer;
 }
@@ -224,7 +221,7 @@ button:hover {
     width: 100%;
     height: 50px;
     background-color: rgba(255, 255, 210, 0.2);
-    color: #ffffd2;
+    color: #facb85;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -233,12 +230,12 @@ button:hover {
 
 .tarja-superior {
     top: 0;
-    border-bottom: 2px solid #ffffd2;
+    border-bottom: 2px solid #facb85;
 }
 
 .tarja-inferior {
     bottom: 0;
-    border-top: 2px solid #ffffd2;
+    border-top: 2px solid #facb85;
 }
 
 .texto-movimento {
@@ -299,3 +296,70 @@ button:hover {
     border: 1px solid #f5c6cb;
 }
 
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .container-principal {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .formulario {
+        width: 100%;
+        height: 90%;
+        padding: 30px;
+        border-radius: 150px 150px 10px 10px;
+    }
+
+    .login {
+        padding-bottom: 10px;
+        gap: 25px;
+        height: 75%;
+    }
+    
+    /* Alterar textos dos labels para mobile */
+    .nome label,
+    .senha label {
+        font-size: 0; /* Esconde o texto original */
+    }
+    
+    button {
+    font-size: 20pt;
+    background-color: #ecc4887a;
+    color: #e9c185;
+    padding: 5px;
+    border-radius: 30px;
+    border: 3px solid;
+    transition: ease-in-out 0.2s;
+    }
+
+    .nome label::after {
+        content: "Nome de usuario --///--";
+        font-size: 16pt; /* Ajuste o tamanho conforme necessário */
+        color: #facb85;
+    }
+    
+    .senha label::after {
+        content: "Senha -------///-------";
+        font-size: 16pt; /* Ajuste o tamanho conforme necessário */
+        color: #facb85;
+    }
+    
+    .textos {
+        width: 100%;
+    }
+    
+    .voltar {
+        width: 80%;
+    }
+    
+    textarea, input {
+        width: 100%;
+    }
+    
+    .img_cacador {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

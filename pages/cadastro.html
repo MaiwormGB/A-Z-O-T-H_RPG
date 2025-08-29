@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Z O T H</title>
+    <title>A Z O T H - Cadastro</title>
     <link rel="icon" href="../Acervo/Icone - AZOTH (1).png">
     <link rel="stylesheet" href="../styles/cadastro.css">
 </head>
@@ -17,7 +17,7 @@
     </div>
     
     <div class="img-container">
-        <img src="../Acervo/Icone - AZOTH (1).png" id="logo" alt="Logo AZOTH">
+        <div class="imagem-fundo"></div>
     </div>
 
     <div class="container-principal">
@@ -25,44 +25,45 @@
         <form class="formulario">
 
             <div class="login">
-
-                <div class="nome">
-                    <label for="nome">Nome de usuario ----\\---</label>
-                    <input type="text" id="nome" >
-                </div>
-                <div class="senha">
-                    <label for="senha">Senha ----------\\----------</label>
-                    <input type="password" id="senha" > <!-- Alterado para type="password" -->
-                </div>
-                <div class="bio">
-                    <textarea name="bio" id="bio" placeholder="Escreva algo para o mundo (Bio)"></textarea>
-                </div>
-                <div class="img_cacador">
-                    <input type="image" id="img_cacador" src="../Acervo/file-add-svgrepo-com.svg">
-                    <label for="img_cacador">Foto de perfil</label>
-                </div>
-
-
-            </div>
+    <div class="nome">
+        <label for="nome">
+            <span class="texto-desktop">Nome de usuario ----\\---</span>
+        </label>
+        <input type="text" id="nome">
+    </div>
+    <div class="senha">
+        <label for="senha">
+            <span class="texto-desktop">Senha ----------\\----------</span>
+        </label>
+        <input type="password" id="senha">
+    </div>
+    <div class="bio">
+        <textarea name="bio" id="bio" placeholder="Escreva algo para o mundo (Bio)"></textarea>
+    </div>
+    <div class="img_cacador">
+        <input type="file" id="img_cacador" accept="image/*" style="display: none;">
+        <label for="img_cacador" class="custom-file-upload">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M5 12H19" stroke="#facb85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Foto de perfil
+        </label>
+    </div>
+</div>
 
             <div class="buttons">
-
                 <button type="submit">Confirmar</button>
-
             </div>
 
         </form>
 
-
         <div class="textos">
-
             <div class="voltar">
                 <a href="login.html">Voltar</a>
-             </div>
-
+            </div>
         </div>
 
-            <!-- Mensagem de status -->
+        <!-- Mensagem de status -->
         <div id="mensagem" class="mensagem" style="display: none;"></div>
 
     </div>
@@ -74,6 +75,5 @@
         </div>
     </div>
 
-    <script src="JS/index_script.js"></script>
 </body>
 </html>
